@@ -3,6 +3,7 @@
 🗺️ A network utility that traces the journey of your packets and pinpoints their physical location at every hop.
 
 🚀 Why Garu-Route?
+
 Standard traceroute tells you the hops your data takes. But if you are nerd, you need to know more. 
 We need to know where those hops are. Has network packet left the country? Are they reaching the right data center? 
 garu-route is built to answer these questions. 
@@ -16,7 +17,7 @@ garu-route is built to answer these questions.
 
 🖥️ Example
 
-[image](https://i.giphy.com/2uIlaHVsql55CLP3as.webp)
+![image](https://i.giphy.com/2uIlaHVsql55CLP3as.webp)
 
 Here's a live look at garu-route tracing the path to instagram.com from the place where I live :
 ```
