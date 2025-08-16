@@ -19,11 +19,11 @@ garu-route is built to answer these questions.
 
 ![image](https://i.giphy.com/2uIlaHVsql55CLP3as.webp)
 
-The data packets' journey to the Japan Stock Exchange (JPX) in Tokyo from Hyderabad, India.
-The journey begins by traveling through Chennai, India. Chennai has a Internet Exchange Point (IXP) in India, acting as a gateway for much of the country's network traffic.
-From Chennai, the packets would then traverse vast distances across the Indian Ocean through undersea fiber optic cables, like the Tata Indicom India-Singapore Cable System (TIISCS).
-Singapore itself is a major global telecommunications hub, with numerous international cable systems landing there. From Singapore, the packets would then take a couple more network hops, likely through other undersea cables, to finally reach Japan. The Singapore India Gateway (SING) cable system also includes branches for connectivity to Indonesia, Thailand, and Oman. The data would likely land in or around Tokyo, the financial heart of Japan, and then travel onward to the Japan Stock Exchange located in Osaka.
-This entire network path, involving multiple countries, IXPs, and undersea cables, highlights the intricate global infrastructure that underpins the interconnected digital world. Here's a trace of that journey via `garu-route`:
+* The data packets' journey to the `Japan Stock Exchange` (JPX) in `Tokyo` from `Hyderabad`, India.
+* The journey begins by traveling through `Chennai`, India. Chennai has a `Internet Exchange Point` (IXP) in India, acting as a gateway for much of the country's network traffic.
+* From `Chennai`, the packets would then traverse vast distances across the Indian Ocean through undersea fiber optic cables, like the Tata Indicom `India-Singapore` Cable System (TIISCS).
+* `Singapore` itself is a major global telecommunications hub, with numerous international cable systems landing there. From Singapore, the packets would then take a couple more network hops, likely through other undersea cables, to finally reach `Japan`. The `Singapore India Gateway` (SING) cable system also includes branches for connectivity to `Indonesia`, `Thailand`, and `Oman`. The data would likely land in or around `Tokyo`, the financial heart of Japan, and then travel onward to the Japan Stock Exchange located in `Osaka`.
+* This entire network path, involving multiple countries, IXPs, and undersea cables, highlights the intricate global infrastructure that underpins the interconnected digital world. Here's a trace of that journey via `garu-route`:
 ```
 ❯ sudo ./target/debug/garu-route --domain jpx.jp       
 +-----+-----------------+--------------+-----------+---------+------------+-------------------------------------------------+------------------------------------------------+------------------+
