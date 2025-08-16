@@ -64,8 +64,8 @@ $ cargo build --release
 ```
 
 🏃 UsageSince garu-route requires raw socket access to send and receive packets, it needs to be run with elevated privileges (sudo).
-# Trace the path to a domain
 ```
+$ # Trace the path to a domain
 $ sudo ./target/debug/garu-route --domain <domain_name>
 ```
 
