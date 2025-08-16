@@ -183,12 +183,12 @@ fn main() {
     table.add_row(Row::new(vec![
         Cell::new("hop"),
         Cell::new("ip_address"),
-        Cell::new("hostname"),
         Cell::new("duration"),
         Cell::new("city"),
         Cell::new("country"),
         Cell::new("region"),
         Cell::new("org"),
+        Cell::new("hostname"),
         Cell::new("location"),
     ]));
 
@@ -196,12 +196,12 @@ fn main() {
         table.add_row(Row::new(vec![
             Cell::new(&result.hop.to_string()),
             Cell::new(&result.ip_address),
-            Cell::new(&result.hostname),
             Cell::new(&format!("{:?}", result.duration)),
             Cell::new(&result.city),
             Cell::new(&result.country),
             Cell::new(&result.region),
             Cell::new(&result.org),
+            Cell::new(&result.hostname),
             Cell::new(&result.location),
         ]));
     }
