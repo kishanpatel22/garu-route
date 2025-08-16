@@ -38,6 +38,7 @@ pub struct RouteNode {
     pub city: String,
     pub country: String,
     pub region: String,
+    pub org: String,
     pub location: String,
 }
 
@@ -80,6 +81,7 @@ pub fn tracer(ip_address: String) -> Vec<RouteNode> {
                     city: "***".to_string(),
                     country: "***".to_string(),
                     region: "***".to_string(),
+                    org: "***".to_string(),
                     location: "***".to_string(),
                 };
 
@@ -109,16 +111,19 @@ pub fn tracer(ip_address: String) -> Vec<RouteNode> {
 
                 if let Some(city) = json_value.get("city").and_then(|v| v.as_str()) {
                     r.city = city.to_string();
-                } 
+                }
                 if let Some(country) = json_value.get("country").and_then(|v| v.as_str()) {
                     r.country = country.to_string();
-                } 
+                }
                 if let Some(location) = json_value.get("region").and_then(|v| v.as_str()) {
                     r.region = location.to_string();
-                } 
+                }
+                if let Some(location) = json_value.get("org").and_then(|v| v.as_str()) {
+                    r.org = location.to_string();
+                }
                 if let Some(location) = json_value.get("loc").and_then(|v| v.as_str()) {
                     r.location = location.to_string();
-                } 
+                }
                 result.push(r);
                 if s.ip().to_string() == ip_address {
                     break;
@@ -133,6 +138,7 @@ pub fn tracer(ip_address: String) -> Vec<RouteNode> {
                     city: "***".to_string(),
                     country: "***".to_string(),
                     region: "***".to_string(),
+                    org: "***".to_string(),
                     location: "***".to_string(),
                 });
                 continue;
@@ -182,6 +188,7 @@ fn main() {
         Cell::new("city"),
         Cell::new("country"),
         Cell::new("region"),
+        Cell::new("org"),
         Cell::new("location"),
     ]));
 
@@ -194,6 +201,7 @@ fn main() {
             Cell::new(&result.city),
             Cell::new(&result.country),
             Cell::new(&result.region),
+            Cell::new(&result.org),
             Cell::new(&result.location),
         ]));
     }
